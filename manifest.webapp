@@ -1,0 +1,66 @@
+{
+  "name": "freedoom",
+  "short_name": "Freedoom",
+  "version": "1.6.1",
+  "description": "Freedoom is not affiliated with DOOM by id Software, and does not contain any content from that game. Additional episodes can be downloaded from options menu (only for phones with 512 Mb RAM). Source code: https://github.com/pelya/doom-kaios",
+  "subtitle": "First-person shooter",
+  "locales": {
+    "en-US": {
+      "name": "Freedoom",
+      "description": "Freedoom is not affiliated with DOOM by id Software, and does not contain any content from that game. Additional episodes can be downloaded from options menu (only for phones with 512 Mb RAM). Source code: https://github.com/pelya/doom-kaios",
+      "subtitle": "First-person shooter"
+    }
+  },
+  "default_locale": "en-US",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/icon_56.png",
+    "112": "/icon_112.png"
+  },
+  "theme_color": "#900000",
+  "developer": {
+    "name": "pelya",
+    "url": "https://github.com/pelya/doom-kaios"
+  },
+  "origin": "app://freedoom",
+  "type": "web",
+  "permissions": {
+    "mobiledata":{},
+    "wifidata":{}
+  },
+  "fullscreen": "true",
+  "categories": [ "games" ],
+  "default_locale": "en-US",
+  "orientation": [ "landscape-primary" ],
+  "precompile": [ "kaiads.v4.min.js", "sys.js", "app.js" ],
+  "activities": {
+    "open": {
+      "href": "/index.html",
+      "filters": {
+        "blob": {
+          "required": true
+        },
+        "filename": {
+          "required": true,
+          "pattern": "^.*\\.(wad|deh)$",
+          "patternFlags": "i"
+        }
+      },
+      "disposition": "window",
+      "returnValue": false
+    },
+    "share": {
+      "href": "/index.html",
+      "blobs": {
+        "required": true
+      },
+      "filenames": {
+        "required": true,
+        "pattern": "^.*\\.(wad|deh)$",
+        "patternFlags": "i"
+      },
+      "disposition": "window",
+      "returnValue": false
+    }
+  }
+}
